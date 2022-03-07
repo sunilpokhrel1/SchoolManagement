@@ -80,7 +80,7 @@ namespace SchoolManagement.Controllers
 
         // POST: Student/Delete/5
         [HttpPost]
-        public ActionResult DeleteConfirm( id )
+        public ActionResult DeleteC( int id )
         {
             try
             {
