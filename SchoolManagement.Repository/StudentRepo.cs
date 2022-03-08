@@ -31,7 +31,7 @@ namespace SchoolManagement.Repository
 
         public List<Student> GetList()
         {
-          return context.Student.ToList();
+            return context.Student.ToList();
         }
 
         public void Update(Student data)
@@ -49,22 +49,28 @@ namespace SchoolManagement.Repository
 
             context.Entry(entity).State = EntityState.Detached;
             context.Student.Attach(data);
-            
+
             context.Entry(data).State = EntityState.Modified;
-            
+
             context.SaveChanges();
 
 
         }
 
-        public void Delete (int id)
+        public void Delete(int id)
         {
             var entity = context.Student.Find(id);
             context.Student.Remove(entity);
-            context.SaveChanges ();
+            context.SaveChanges();
 
 
         }
+        //public void Delete(Student id)
+        //{
+        //    var entity = context.Student.Find(id);
+        //    context.Student.Remove(entity);
+        //    context.SaveChanges();
 
+        //}
     }
 }

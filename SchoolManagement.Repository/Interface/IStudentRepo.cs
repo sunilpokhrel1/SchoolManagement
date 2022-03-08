@@ -14,14 +14,10 @@ namespace SchoolManagement.Repository
         List<Student> GetList();
         Student GetById(int id);
 
-        void Delete(int id);
-       
+       void Delete(int id);
+      // void Delete(Student id);
 
-
-
-
-
-
+       // Student Delete(Student id);
 
     }
 }

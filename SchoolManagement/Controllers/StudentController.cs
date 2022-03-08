@@ -73,17 +73,18 @@ namespace SchoolManagement.Controllers
         }
 
         // GET: Student/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View(_repo.GetById(id));
-        }
+        //public ActionResult Delete(int id)
+        //{
+        //    return View(_repo.GetById(id));
+        //}
 
         // POST: Student/Delete/5
         [HttpPost]
-        public ActionResult DeleteC( int id )
+        public ActionResult Delete( int id)
         {
             try
             {
+               // _repo.GetById(id)
                 _repo.Delete(id);
 
                 return RedirectToAction("Index");
